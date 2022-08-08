@@ -3,10 +3,12 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import "./App.css";
+import AppContext from "./context/AppContext";
 
 
 function App() {
   return (
+    <AppContext.Provider>
     <div className="App">
       <BrowserRouter>
       <Navbar/>
@@ -17,6 +19,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </AppContext.Provider>
   );
 }
 
